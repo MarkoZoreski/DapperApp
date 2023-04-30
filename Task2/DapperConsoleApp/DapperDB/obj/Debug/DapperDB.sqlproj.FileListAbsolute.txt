@@ -1,0 +1,6 @@
+D:\Desktop\FINKI\job\project\Task2\DapperConsoleApp\DapperDB\bin\Debug\DapperDB.dacpac
+D:\Desktop\FINKI\job\project\Task2\DapperConsoleApp\DapperDB\bin\Debug\DapperDB.dll
+D:\Desktop\FINKI\job\project\Task2\DapperConsoleApp\DapperDB\bin\Debug\DapperDB.pdb
+D:\Desktop\FINKI\job\project\Task2\DapperConsoleApp\DapperDB\obj\Debug\DapperDB.sqlprojAssemblyReference.cache
+D:\Desktop\FINKI\job\project\Task2\DapperConsoleApp\DapperDB\obj\Debug\DapperDB.dll
+D:\Desktop\FINKI\job\project\Task2\DapperConsoleApp\DapperDB\obj\Debug\DapperDB.pdb
