@@ -9,13 +9,12 @@ using System.Threading.Tasks;
 
 namespace DapperConsoleApp.Repository
 {
-    public class ProductRepository : IProductRepository
+    public class ProductRepository
     {
-        private string connectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=DapperDB;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
-
+        
         private readonly IDbConnection _dbConnection;
 
-        public ProductRepository()
+        public ProductRepository(string connectionString)
         {
             _dbConnection = new SqlConnection(connectionString);
         }
@@ -34,7 +33,7 @@ namespace DapperConsoleApp.Repository
             FROM Product p
             INNER JOIN OrderDetails od ON p.ProductID = od.ProductID
             GROUP BY p.ProductID, p.ProductName, p.CategoryID, p.QuantityPerUnit, p.UnitPrice,
-                p.UnitsInStock, p.UnitsOnOrder, p.ReorderLevel, p.Discontinued, p.LastUserId, p.LastDateUpdated
+                p.UnitsInStock, p.UnitsOnOrder, p.ReorderLevel, p.Discontinued, p.LastUserId, p.LastDateUpdated, p.SupplierID
             ORDER BY TotalQuantity DESC";
             var products = await _dbConnection.QueryAsync<Product>(query);
             return products;

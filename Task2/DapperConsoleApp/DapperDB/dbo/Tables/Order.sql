@@ -9,9 +9,9 @@
     [ShipVia] NCHAR(50) NOT NULL, 
     [Freight] FLOAT NOT NULL, 
     [ShipName] NCHAR(50) NULL, 
-    [ShipAdress] NCHAR(50) NULL, 
+    [ShipAddress] NCHAR(50) NULL, 
     [ShipCity] NCHAR(50) NULL, 
     [ShipRegion] NCHAR(50) NULL, 
-    [ShipPostalCoe] NCHAR(50) NULL, 
+    [ShipPostalCode] NCHAR(50) NULL, 
     [ShipCountry] NCHAR(50) NULL
 )

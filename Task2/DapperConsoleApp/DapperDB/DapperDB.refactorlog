@@ -49,4 +49,25 @@
     <Property Name="ParentElementType" Value="SqlTable" />
     <Property Name="NewName" Value="OrderID" />
   </Operation>
+  <Operation Name="Rename Refactor" Key="d6ca6b7e-9b5e-44a9-a7a6-3ccb99e8a9ea" ChangeDateTime="04/30/2023 10:46:03">
+    <Property Name="ElementName" Value="[dbo].[Category].[CategotyName]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Category]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="CategoryName" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="f7c9427e-5b41-4e9b-b5b1-9dd4c4a49751" ChangeDateTime="04/30/2023 10:58:01">
+    <Property Name="ElementName" Value="[dbo].[Order].[ShipPostalCoe]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Order]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="ShipPostalCode" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="61954b6d-9f92-41a8-ba43-7ca7f343e80e" ChangeDateTime="04/30/2023 11:19:52">
+    <Property Name="ElementName" Value="[dbo].[Order].[ShipAdress]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Order]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="ShipAddress" />
+  </Operation>
 </Operations>

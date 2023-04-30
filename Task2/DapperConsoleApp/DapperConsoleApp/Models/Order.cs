@@ -6,7 +6,6 @@ namespace DapperConsoleApp.Models
 {
     public class Order
     {
-        public int MyProperty { get; set; }
         public int OrderID { get; set; }
         public int CustomerID { get; set; }
         public int EmployeeID { get; set; }
@@ -16,10 +15,10 @@ namespace DapperConsoleApp.Models
         public string ShipVia { get; set; }
         public float Freight { get; set; }
         public string ShipName { get; set; }
-        public string ShipAdress { get; set; }
+        public string ShipAddress { get; set; }
         public string ShipCity { get; set; }
         public string ShipRegion { get; set; }
-        public string ShipPostalCoe { get; set; }
+        public string ShipPostalCode { get; set; }
         public string ShipCountry { get; set; }
 
     }

@@ -9,18 +9,17 @@ using System.Threading.Tasks;
 
 namespace DapperConsoleApp.Repository
 {
-    public class OrderRepository : IOrderRepository
+    public class OrderRepository
     {
-        private string connectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=DapperDB;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
-
+        
         private readonly IDbConnection _dbConnection;
 
-        public OrderRepository()
+        public OrderRepository(string connectionString)
         {
             _dbConnection = new SqlConnection(connectionString);
         }
 
-        public async Task<int> CreateOrderAsync(Order order)
+        public async Task<int> CreateOrder(Order order)
         {
             var query = @"
             INSERT INTO [Order] 
@@ -61,7 +60,7 @@ namespace DapperConsoleApp.Repository
             return orderId;
         }
 
-        public async Task<IEnumerable<Order>> GetOrdersSortedByDateAsync()
+        public async Task<IEnumerable<Order>> GetOrdersSortedByDate()
         {
             var query = @"
             SELECT OrderID,OrderDate FROM [Order]
@@ -71,7 +70,7 @@ namespace DapperConsoleApp.Repository
             return orders;
         }
 
-        public async Task<int> CreateOrderDetailsAsync(OrderDetails orderDetails)
+        public async Task<int> CreateOrderDetails(OrderDetails orderDetails)
         {
             var query = @"
             INSERT INTO OrderDetails
@@ -96,7 +95,7 @@ namespace DapperConsoleApp.Repository
             return orderDetailsId;
         }
 
-        public async Task<IEnumerable<OrderDetails>> GetOrderDetailsByOrderIdAsync(int orderId)
+        public async Task<IEnumerable<OrderDetails>> GetOrderDetailsByOrderId(int orderId)
         {
             var query = @"
             SELECT * FROM OrderDetails
