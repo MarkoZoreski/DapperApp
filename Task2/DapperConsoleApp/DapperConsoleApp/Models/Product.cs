@@ -18,5 +18,6 @@ namespace DapperConsoleApp.Models
         public bool Discontinued { get; set; }
         public int LastUserId { get; set; }
         public DateTime LastDateUpdated { get; set; }
+        public Category category { get; set; }
     }
 }
